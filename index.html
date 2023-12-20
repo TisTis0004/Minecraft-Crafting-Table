@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minecraft Crafting Table</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div>
+      <h1>Minecraft Crafting Table</h1>
+      <!--main container-->
+      <div class="main_container">
+        <h2 style="margin-left: 25px">Crafting</h2>
+        <!-- Crafting -->
+        <div class="crafting">
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-1"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-2"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-3"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-4"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-5"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-6"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-7"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-8"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell craft-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="craft-cell-img cell-9"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="result-cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="result-img"
+                style="
+                  margin-left: 1px;
+                  margin-top: 1px;
+                  width: 55px;
+                  height: 55px;
+                  padding: 9px;
+                  display: none;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Reset Boxes -->
+        <div class="box1 box"></div>
+        <div class="box2 box"></div>
+        <div class="box3 box"></div>
+        <div class="box4 box"></div>
+        <div class="box5 box"></div>
+        <div class="box6 box"></div>
+        <div class="box7 box"></div>
+        <div class="box8 box"></div>
+        <div class="box9 box"></div>
+        <div class="box10 box"></div>
+        <div class="reset-btn">Reset</div>
+        <!-- Reset Boxes -->
+        <!--Inventory -->
+        <h2>Inventory</h2>
+        <div class="inventory">
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                onclick=""
+                class="inventory-1"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/17_Oak Wood.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-2"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/4_Cobblestone.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-3"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/265_Iron Ingot.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-4"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/266_Gold Ingot.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-5"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/264_Diamond.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-6"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/331_Redstone.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-7"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/287_String.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-8"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/288_Feather.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-9"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/318_Flint.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-10"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/263_Coal.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-11"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-12"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-13"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-14"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-15"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-16"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-17"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-18"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-19"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-20"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-21"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-22"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-23"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-24"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-25"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-26"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="inventory-27"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+        </div>
+        <!--Inventory -->
+        <!-- ToolBar -->
+        <div class="toolbar">
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool1"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool2"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool3"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool4"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool5"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool6"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool7"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool8"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+          <div class="cell">
+            <div class="white_border"></div>
+            <div class="gray_border">
+              <img
+                draggable="false"
+                class="tool9"
+                style="
+                  margin-left: 2px;
+                  margin-top: 2px;
+                  width: 42px;
+                  height: 42px;
+                  padding: 3px;
+                "
+                src="../assets/pics/0_Air.png"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- ToolBar -->
+      </div>
+      <!--main container-->
+    </div>
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

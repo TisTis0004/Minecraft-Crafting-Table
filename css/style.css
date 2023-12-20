@@ -1,0 +1,233 @@
+* {
+  user-select: none;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: minecraft;
+  src: url("/font/MinecraftTen-VGORe.ttf");
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2b2b2a;
+}
+h1 {
+  color: #ffffff;
+  text-align: center;
+  font-family: minecraft;
+  letter-spacing: 2px;
+}
+.main_container {
+  padding: 50px;
+  padding-bottom: 35px;
+  background-color: #c6c6c6;
+  border-radius: 5px;
+  position: relative;
+  /* z-index: 5; */
+  /* cursor: url(../assets/pics/105_Melon\ Stem.png), pointer; */
+}
+.main_container::after {
+  content: "";
+  position: absolute;
+  border-right: 3px solid #343434b3;
+  border-bottom: 3px solid #343434b3;
+  outline: 4px solid black;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+.main_container::before {
+  content: "";
+  position: absolute;
+  border-top: 3px solid white;
+  border-left: 3px solid white;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+}
+.inventory {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(9, 1fr);
+  position: relative;
+}
+.cell,
+.result-cell {
+  background-color: #8b8b8b;
+  width: 55px;
+  height: 55px;
+  position: relative;
+  margin: 0px 2px 2px 0px;
+  z-index: 5;
+}
+.white_border {
+  position: absolute;
+  border-right: 3px solid white;
+  border-bottom: 3px solid white;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: 2;
+}
+.gray_border {
+  position: absolute;
+  border-top: 3px solid #343434b3;
+  border-left: 3px solid #343434b3;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  z-index: 4;
+}
+.toolbar {
+  display: flex;
+  margin-top: 15px;
+  position: relative;
+}
+h2 {
+  color: #5d5c5c;
+  font-family: "Press Start 2p";
+  font-weight: lighter;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+.crafting {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  width: 165px;
+  margin-bottom: -50px;
+  margin-left: 30px;
+}
+.inventory::after {
+  content: "";
+  width: 100px;
+  height: 15px;
+  background-color: #8c8c8c;
+  position: absolute;
+  top: -150px;
+  left: 240px;
+}
+.inventory::before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -172px;
+  left: 340px;
+  border: 30px solid #8c8c8c;
+  border-color: transparent transparent transparent #8c8c8c;
+}
+.result-cell {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 145px;
+  left: 450px;
+}
+.cell:hover,
+.result-cell:hover {
+  background-color: #22980d;
+}
+img {
+  z-index: 20;
+  box-sizing: content-box;
+}
+.cell:active,
+.result-cell:active {
+  background-color: #1a730a;
+}
+.box {
+  position: absolute;
+  z-index: 99;
+  background-color: transparent;
+}
+.box1 {
+  top: 0px;
+  left: 253px;
+  width: 198px;
+  height: 328px;
+}
+.box2 {
+  top: 0px;
+  left: 255px;
+  width: 355px;
+  height: 144px;
+}
+.box3 {
+  top: 0px;
+  left: 0px;
+  width: 255px;
+  height: 100px;
+}
+.box4 {
+  top: 228px;
+  left: 355px;
+  width: 255px;
+  height: 100px;
+}
+.box5 {
+  top: 140px;
+  left: 533px;
+  width: 75px;
+  height: 100px;
+}
+.box6 {
+  top: 140px;
+  left: 565px;
+  width: 45px;
+  height: 465px;
+}
+.box7 {
+  top: 575px;
+  left: 2px;
+  width: 565px;
+  height: 30px;
+}
+.box8 {
+  top: 0px;
+  left: 0px;
+  width: 79px;
+  height: 328px;
+}
+.box9 {
+  top: 272px;
+  left: 0px;
+  width: 300px;
+  height: 56px;
+}
+.box10 {
+  top: 272px;
+  left: 0px;
+  width: 50px;
+  height: 320px;
+}
+.reset-btn {
+  position: absolute;
+  font-size: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background-color: #575757;
+  top: 20px;
+  text-align: center;
+  left: 750px;
+  border-radius: 10px;
+  border: 2px solid #dfdddd;
+  box-shadow: 4px 4px #dfdddd;
+  font-family: minecraft;
+}
+.reset-btn:hover {
+  cursor: pointer;
+}
+.reset-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
