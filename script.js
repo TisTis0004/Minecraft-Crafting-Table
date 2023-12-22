@@ -143,6 +143,7 @@ function chooseItem(item, url) {
       currentUrl = url;
       if (result.src === currentUrl) {
         result.src = "/assets/pics/0_Air.png";
+        result.style.display = "none";
         for (let x = 0; x < craftCell.length; x++)
           craftCell[x].src = "/assets/pics/0_Air.png";
       }
@@ -156,10 +157,8 @@ function changeResult(url) {
   result.src = url;
   displayResult();
   let temp = currentUrl;
-  // main.style.cursor = "default";
   if (!result.src.includes("0_Air")) {
     let cnt = 0;
-    console.log(temp);
     for (let i = 0; i < inventoryCell.length; i++) {
       if (inventoryCell[i].src === temp) {
         cnt++;
@@ -180,7 +179,6 @@ function changeResult(url) {
       }
     }
   }
-  // currentUrl = "";
 }
 
 const craftCell = document.querySelectorAll(".craft-cell-img");
@@ -192,7 +190,7 @@ for (let i = 0; i < craftCell.length; i++) {
     } else {
       craftCell[i].src = "/assets/pics/0_Air.png";
     }
-    let items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (let j = 0; j < craftCell.length; j++) {
       if (craftCell[j].src.includes("0_Air")) items[0]++;
       else if (craftCell[j].src.includes("17_Oak")) items[1]++;
