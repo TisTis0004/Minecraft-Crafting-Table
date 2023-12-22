@@ -1271,7 +1271,7 @@ for (let i = 0; i < inventoryCell.length; i++) {
     console.log(craftCell[3].src);
     for (let j = 0; j < craftCell.length; j++)
       craftCell[j].src = "/assets/pics/0_Air.png";
-    main.style.cursor = "default";
+    // main.style.cursor = "default"
     currentUrl = "";
     result.src = "/assets/pics/0_Air.png";
     result.style.display = "none";
