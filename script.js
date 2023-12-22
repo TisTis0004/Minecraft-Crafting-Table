@@ -111,17 +111,27 @@ const result = document.querySelector(".result-img");
 let currentUrl = "";
 function cursorDefault(box) {
   box.onclick = () => {
-    main.style.cursor = "default";
-    let temp = currentUrl;
-    currentUrl = "";
-    for (let i = 0; i < inventoryCell.length; i++) {
-      if (inventoryCell[i].src.includes("0_Air") && currentUrl === "") {
-        inventoryCell[i].src = temp;
-        for (let x = 11; x < inventoryCell.length; x++) {
-          if (inventoryCell[x].src === inventoryCell[x - 1].src)
-            inventoryCell[x].src = "/assets/pics/0_Air.png";
+    if (currentUrl !== "") {
+      main.style.cursor = "default";
+      let temp = currentUrl;
+      currentUrl = "";
+      let cnt = 0;
+      for (let i = 0; i < inventoryCell.length; i++) {
+        if (inventoryCell[i].src === temp) cnt++;
+      }
+      for (let i = 0; i < inventoryCell.length; i++) {
+        if (
+          inventoryCell[i].src.includes("0_Air") &&
+          currentUrl === "" &&
+          cnt === 0
+        ) {
+          inventoryCell[i].src = temp;
+          for (let x = 11; x < inventoryCell.length; x++) {
+            if (inventoryCell[x].src === inventoryCell[x - 1].src)
+              inventoryCell[x].src = "/assets/pics/0_Air.png";
+          }
+          break;
         }
-        break;
       }
     }
   };
@@ -145,9 +155,22 @@ function displayResult() {
 function changeResult(url) {
   result.src = url;
   displayResult();
+  let temp = currentUrl;
+  // main.style.cursor = "default";
   if (!result.src.includes("0_Air")) {
-    for (let i = 0; i < inventoryCell.length; i++)
-      if (inventoryCell[i].src.includes("0_Air") && currentUrl !== "") {
+    let cnt = 0;
+    console.log(temp);
+    for (let i = 0; i < inventoryCell.length; i++) {
+      if (inventoryCell[i].src === temp) {
+        cnt++;
+      }
+    }
+    for (let i = 0; i < inventoryCell.length; i++) {
+      if (
+        inventoryCell[i].src.includes("0_Air") &&
+        currentUrl !== "" &&
+        cnt === 0
+      ) {
         inventoryCell[i].src = currentUrl;
         for (let x = 11; x < inventoryCell.length; x++) {
           if (inventoryCell[x].src === inventoryCell[x - 1].src)
@@ -155,7 +178,9 @@ function changeResult(url) {
         }
         break;
       }
+    }
   }
+  // currentUrl = "";
 }
 
 const craftCell = document.querySelectorAll(".craft-cell-img");
