@@ -112,7 +112,18 @@ let currentUrl = "";
 function cursorDefault(box) {
   box.onclick = () => {
     main.style.cursor = "default";
+    let temp = currentUrl;
     currentUrl = "";
+    for (let i = 0; i < inventoryCell.length; i++) {
+      if (inventoryCell[i].src.includes("0_Air") && currentUrl === "") {
+        inventoryCell[i].src = temp;
+        for (let x = 11; x < inventoryCell.length; x++) {
+          if (inventoryCell[x].src === inventoryCell[x - 1].src)
+            inventoryCell[x].src = "/assets/pics/0_Air.png";
+        }
+        break;
+      }
+    }
   };
 }
 function chooseItem(item, url) {
@@ -156,10 +167,7 @@ for (let i = 0; i < craftCell.length; i++) {
     } else {
       craftCell[i].src = "/assets/pics/0_Air.png";
     }
-    let items = [
-      0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-      0, 0, 0, 0, 0, 0, 0, 0, 0,
-    ];
+    let items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (let j = 0; j < craftCell.length; j++) {
       if (craftCell[j].src.includes("0_Air")) items[0]++;
       else if (craftCell[j].src.includes("17_Oak")) items[1]++;
@@ -1257,18 +1265,10 @@ for (let i = 0; i < craftCell.length; i++) {
 for (let i = 0; i < inventoryCell.length; i++) {
   const reset = document.querySelector(".reset-btn");
   reset.onclick = () => {
-    console.log(inventoryCell[10].src);
-    console.log(inventoryCell[11].src);
-    console.log(inventoryCell[12].src);
-    console.log(inventoryCell[13].src);
     for (let j = 10; j < inventoryCell.length; j++) {
       inventoryCell[j].src = "/assets/pics/0_Air.png";
       // inventoryCell[j].style.display = "none";
     }
-    console.log(craftCell[0].src);
-    console.log(craftCell[1].src);
-    console.log(craftCell[2].src);
-    console.log(craftCell[3].src);
     for (let j = 0; j < craftCell.length; j++)
       craftCell[j].src = "/assets/pics/0_Air.png";
     main.style.cursor = "default";
