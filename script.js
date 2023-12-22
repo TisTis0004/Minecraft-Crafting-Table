@@ -121,9 +121,9 @@ function chooseItem(item, url) {
       main.style.cursor = `url(${url}),pointer`;
       currentUrl = url;
       if (result.src === currentUrl) {
-        result.src = "../assets/pics/0_Air.png";
+        result.src = "/assets/pics/0_Air.png";
         for (let x = 0; x < craftCell.length; x++)
-          craftCell[x].src = "../assets/pics/0_Air.png";
+          craftCell[x].src = "/assets/pics/0_Air.png";
       }
     };
 }
@@ -140,7 +140,7 @@ function changeResult(url) {
         inventoryCell[i].src = currentUrl;
         for (let x = 11; x < inventoryCell.length; x++) {
           if (inventoryCell[x].src === inventoryCell[x - 1].src)
-            inventoryCell[x].src = "../assets/pics/0_Air.png";
+            inventoryCell[x].src = "/assets/pics/0_Air.png";
         }
         break;
       }
@@ -154,7 +154,7 @@ for (let i = 0; i < craftCell.length; i++) {
       craftCell[i].style.display = "block";
       craftCell[i].src = currentUrl;
     } else {
-      craftCell[i].src = "../assets/pics/0_Air.png";
+      craftCell[i].src = "/assets/pics/0_Air.png";
     }
     let items = [
       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -181,37 +181,37 @@ for (let i = 0; i < craftCell.length; i++) {
       else if (craftCell[j].src.includes("61_Furnace")) items[17]++;
 
       //Changing the result cell
-      result.src = "../assets/pics/0_Air.png";
+      result.src = "/assets/pics/0_Air.png";
       if (items[1] === 1 && items[0] === 8) {
-        changeResult("../assets/pics/5_Oak Wood Plank.png");
+        changeResult("/assets/pics/5_Oak Wood Plank.png");
       }
       //Furnace
       else if (items[2] === 8 && craftCell[4].src.includes("0_Air")) {
-        changeResult("../assets/pics/61_Furnace.png");
+        changeResult("/assets/pics/61_Furnace.png");
       }
       //Iron Block
       else if (items[3] === 9) {
-        changeResult("../assets/pics/42_Iron Block.png");
+        changeResult("/assets/pics/42_Iron Block.png");
       }
       //Gold Block
       else if (items[4] === 9) {
-        changeResult("../assets/pics/41_Gold Block.png");
+        changeResult("/assets/pics/41_Gold Block.png");
       }
       //Diamond Block
       else if (items[5] === 9) {
-        changeResult("../assets/pics/57_Diamond Block.png");
+        changeResult("/assets/pics/57_Diamond Block.png");
       }
       //Redstone Block
       else if (items[6] === 9) {
-        changeResult("../assets/pics/152_Redstone Block.png");
+        changeResult("/assets/pics/152_Redstone Block.png");
       }
       //Block of Coal
       else if (items[7] === 9) {
-        changeResult("../assets/pics/173_Block of Coal.png");
+        changeResult("/assets/pics/173_Block of Coal.png");
       }
       //Flint and Steel
       else if (items[8] === 1 && items[3] === 1 && items[0] === 7) {
-        changeResult("../assets/pics/259_Flint and Steel.png");
+        changeResult("/assets/pics/259_Flint and Steel.png");
       }
       //Chest
       else if (
@@ -219,7 +219,7 @@ for (let i = 0; i < craftCell.length; i++) {
         items[9] === 8 &&
         craftCell[4].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/54_Chest.png");
+        changeResult("/assets/pics/54_Chest.png");
       }
       //Compass
       else if (
@@ -230,7 +230,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("331") &&
         items[0] === 4
       ) {
-        changeResult("../assets/pics/345_Compass.png");
+        changeResult("/assets/pics/345_Compass.png");
       }
       //Clock
       else if (
@@ -241,7 +241,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("331") &&
         items[0] === 4
       ) {
-        changeResult("../assets/pics/347_Clock.png");
+        changeResult("/assets/pics/347_Clock.png");
       }
       //Stick
       else if (
@@ -260,7 +260,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[5].src.includes("5_Oak") &&
             craftCell[8].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/280_Stick.png");
+        changeResult("/assets/pics/280_Stick.png");
       }
       //Torch
       else if (
@@ -280,7 +280,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[5].src.includes("263_Coal") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/50_Torch.png");
+        changeResult("/assets/pics/50_Torch.png");
       }
       //RedStone Torch
       else if (
@@ -300,7 +300,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[5].src.includes("331_Redstone") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/76_Redstone Torch on.png");
+        changeResult("/assets/pics/76_Redstone Torch on.png");
       }
       //Lever
       else if (
@@ -320,7 +320,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[5].src.includes("280_Stick") &&
             craftCell[8].src.includes("4_Cobblestone")))
       ) {
-        changeResult("../assets/pics/69_Lever.png");
+        changeResult("/assets/pics/69_Lever.png");
       }
       //Rails
       else if (
@@ -330,7 +330,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[1].src.includes("0_Air") &&
         craftCell[7].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/66_Rail.png");
+        changeResult("/assets/pics/66_Rail.png");
       }
       //Activator Rails
       else if (
@@ -347,7 +347,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[7].src.includes("280_Stick") &&
         craftCell[4].src.includes("76_Redstone")
       ) {
-        changeResult("../assets/pics/157_Activator Rail.png");
+        changeResult("/assets/pics/157_Activator Rail.png");
       }
       //Ladders
       else if (
@@ -356,7 +356,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[1].src.includes("0_Air") &&
         craftCell[7].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/65_Ladder.png");
+        changeResult("/assets/pics/65_Ladder.png");
       }
       //Boat
       else if (
@@ -373,7 +373,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[4].src.includes("5_Oak") &&
             craftCell[5].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/333_Oak Boat.png");
+        changeResult("/assets/pics/333_Oak Boat.png");
       }
       //Minecart
       else if (
@@ -390,15 +390,15 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[4].src.includes("265_Iron") &&
             craftCell[5].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/328_Minecart.png");
+        changeResult("/assets/pics/328_Minecart.png");
       }
       //Minecart with Chest
       else if (items[0] === 7 && items[14] === 1 && items[13] === 1) {
-        changeResult("../assets/pics/342_Minecart with Chest.png");
+        changeResult("/assets/pics/342_Minecart with Chest.png");
       }
       //Minecart with Furnace
       else if (items[0] === 7 && items[17] === 1 && items[13] === 1) {
-        changeResult("../assets/pics/343_Minecart with Furnace.png");
+        changeResult("/assets/pics/343_Minecart with Furnace.png");
       }
       //Wooden Door
       else if (
@@ -411,7 +411,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("0_Air") &&
             craftCell[8].src.includes("0_Air")))
       ) {
-        changeResult("../assets/pics/324_Oak Door.png");
+        changeResult("/assets/pics/324_Oak Door.png");
       }
       //Iron Door
       else if (
@@ -424,7 +424,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("0_Air") &&
             craftCell[8].src.includes("0_Air")))
       ) {
-        changeResult("../assets/pics/330_Iron Door.png");
+        changeResult("/assets/pics/330_Iron Door.png");
       }
       //Bucket
       else if (
@@ -437,7 +437,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[7].src.includes("265_Iron") &&
             craftCell[5].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/325_Bucket.png");
+        changeResult("/assets/pics/325_Bucket.png");
       }
       //Wool
       else if (
@@ -460,7 +460,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[7].src.includes("287_String") &&
             craftCell[8].src.includes("287_String")))
       ) {
-        changeResult("../assets/pics/35_White Wool.png");
+        changeResult("/assets/pics/35_White Wool.png");
       }
       //Bed
       else if (
@@ -480,7 +480,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[4].src.includes("5_Oak") &&
             craftCell[5].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/355_Bed.png");
+        changeResult("/assets/pics/355_Bed.png");
       }
       //Piston
       else if (
@@ -499,7 +499,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("265_Iron") &&
         craftCell[7].src.includes("331_Redstone")
       ) {
-        changeResult("../assets/pics/33_Piston.png");
+        changeResult("/assets/pics/33_Piston.png");
       }
       //Anvil
       else if (
@@ -514,7 +514,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[7].src.includes("265_Iron") &&
         craftCell[8].src.includes("265_Iron")
       ) {
-        changeResult("../assets/pics/145_Anvil.png");
+        changeResult("/assets/pics/145_Anvil.png");
       }
       //BOW
       else if (
@@ -533,7 +533,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[3].src.includes("287_String") &&
             craftCell[6].src.includes("287_String")))
       ) {
-        changeResult("../assets/pics/261_Bow.png");
+        changeResult("/assets/pics/261_Bow.png");
       }
       //Arrow
       else if (
@@ -551,7 +551,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("280_Stick") &&
             craftCell[8].src.includes("288_Feather")))
       ) {
-        changeResult("../assets/pics/262_Arrow.png");
+        changeResult("/assets/pics/262_Arrow.png");
       }
       //Fishing Rod
       else if (
@@ -569,7 +569,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[3].src.includes("287_String") &&
             craftCell[6].src.includes("287_String")))
       ) {
-        changeResult("../assets/pics/346_Fishing Rod.png");
+        changeResult("/assets/pics/346_Fishing Rod.png");
       }
       //Powered Rails
       else if (
@@ -579,7 +579,7 @@ for (let i = 0; i < craftCell.length; i++) {
         items[10] === 1 &&
         craftCell[1].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/27_Powered Rail.png");
+        changeResult("/assets/pics/27_Powered Rail.png");
       }
       //Wooden Plate
       else if (
@@ -598,7 +598,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[7].src.includes("5_Oak") &&
             craftCell[8].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/72_Wooden Pressure Plate.png");
+        changeResult("/assets/pics/72_Wooden Pressure Plate.png");
       }
       //Stone Plate
       else if (
@@ -617,7 +617,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[7].src.includes("4_Cobblestone") &&
             craftCell[8].src.includes("4_Cobblestone")))
       ) {
-        changeResult("../assets/pics/70_Stone Pressure Plate.png");
+        changeResult("/assets/pics/70_Stone Pressure Plate.png");
       }
       //Iron Plate
       else if (
@@ -636,7 +636,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[7].src.includes("265_Iron") &&
             craftCell[8].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/148_Weighted Pressure Plate heavy.png");
+        changeResult("/assets/pics/148_Weighted Pressure Plate heavy.png");
       }
       //Golden Plate
       else if (
@@ -655,7 +655,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[7].src.includes("266_Gold") &&
             craftCell[8].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/147_Weighted Pressure Plate light.png");
+        changeResult("/assets/pics/147_Weighted Pressure Plate light.png");
       }
       //Wooden Stairs
       else if (
@@ -668,7 +668,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("0_Air") &&
             craftCell[3].src.includes("0_Air")))
       ) {
-        changeResult("../assets/pics/53_Oak Wood Stairs.png");
+        changeResult("/assets/pics/53_Oak Wood Stairs.png");
       }
       //Stone Stairs
       else if (
@@ -681,7 +681,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("0_Air") &&
             craftCell[3].src.includes("0_Air")))
       ) {
-        changeResult("../assets/pics/67_Cobblestone Stairs.png");
+        changeResult("/assets/pics/67_Cobblestone Stairs.png");
       }
       //Diamond Sword
       else if (
@@ -696,7 +696,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("264_Diamond") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/276_Diamond Sword.png");
+        changeResult("/assets/pics/276_Diamond Sword.png");
       }
       //Crafting Table
       else if (
@@ -719,7 +719,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[7].src.includes("5_Oak") &&
             craftCell[8].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/58_Crafting Table.png");
+        changeResult("/assets/pics/58_Crafting Table.png");
       }
       //Hopper
       else if (
@@ -730,7 +730,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[6].src.includes("0_Air") &&
         craftCell[8].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/154_Hopper.png");
+        changeResult("/assets/pics/154_Hopper.png");
       }
       //Gold Sword
       else if (
@@ -745,7 +745,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("266_Gold") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/283_Golden Sword.png");
+        changeResult("/assets/pics/283_Golden Sword.png");
       }
       //Iron Sword
       else if (
@@ -760,7 +760,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("265_Iron") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/267_Iron Sword.png");
+        changeResult("/assets/pics/267_Iron Sword.png");
       }
       //Stone Sword
       else if (
@@ -775,7 +775,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("4_Cobblestone") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/272_Stone Sword.png");
+        changeResult("/assets/pics/272_Stone Sword.png");
       }
       //Wooden Sword
       else if (
@@ -790,7 +790,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("5_Oak") &&
             craftCell[8].src.includes("280_Stick")))
       ) {
-        changeResult("../assets/pics/268_Wooden Sword.png");
+        changeResult("/assets/pics/268_Wooden Sword.png");
       }
       //Diamond Shovel
       else if (
@@ -807,7 +807,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("280_Stick") &&
             craftCell[2].src.includes("264_Diamond")))
       ) {
-        changeResult("../assets/pics/277_Diamond Shovel.png");
+        changeResult("/assets/pics/277_Diamond Shovel.png");
       }
       //Gold Shovel
       else if (
@@ -824,7 +824,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("280_Stick") &&
             craftCell[2].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/284_Golden Shovel.png");
+        changeResult("/assets/pics/284_Golden Shovel.png");
       }
       //Iron Shovel
       else if (
@@ -841,7 +841,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("280_Stick") &&
             craftCell[2].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/256_Iron Shovel.png");
+        changeResult("/assets/pics/256_Iron Shovel.png");
       }
       //Stone Shovel
       else if (
@@ -858,7 +858,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("280_Stick") &&
             craftCell[2].src.includes("4_Cobblestone")))
       ) {
-        changeResult("../assets/pics/273_Stone Shovel.png");
+        changeResult("/assets/pics/273_Stone Shovel.png");
       }
       //Wooden Shovel
       else if (
@@ -875,7 +875,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("280_Stick") &&
             craftCell[2].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/269_Wooden Shovel.png");
+        changeResult("/assets/pics/269_Wooden Shovel.png");
       }
       //Diamond Pickaxe
       else if (
@@ -888,7 +888,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("280_Stick") &&
         craftCell[7].src.includes("280_Stick")
       ) {
-        changeResult("../assets/pics/278_Diamond Pickaxe.png");
+        changeResult("/assets/pics/278_Diamond Pickaxe.png");
       }
       //Gold Pickaxe
       else if (
@@ -901,7 +901,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("280_Stick") &&
         craftCell[7].src.includes("280_Stick")
       ) {
-        changeResult("../assets/pics/285_Golden Pickaxe.png");
+        changeResult("/assets/pics/285_Golden Pickaxe.png");
       }
       //Iron Pickaxe
       else if (
@@ -914,7 +914,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("280_Stick") &&
         craftCell[7].src.includes("280_Stick")
       ) {
-        changeResult("../assets/pics/257_Iron Pickaxe.png");
+        changeResult("/assets/pics/257_Iron Pickaxe.png");
       }
       //Stone Pickaxe
       else if (
@@ -927,7 +927,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("280_Stick") &&
         craftCell[7].src.includes("280_Stick")
       ) {
-        changeResult("../assets/pics/274_Stone Pickaxe.png");
+        changeResult("/assets/pics/274_Stone Pickaxe.png");
       }
       //Wooden Pickaxe
       else if (
@@ -940,7 +940,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("280_Stick") &&
         craftCell[7].src.includes("280_Stick")
       ) {
-        changeResult("../assets/pics/270_Wooden Pickaxe.png");
+        changeResult("/assets/pics/270_Wooden Pickaxe.png");
       }
       //Diamond Axe
       else if (
@@ -960,7 +960,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("264_Diamond") &&
             craftCell[4].src.includes("264_Diamond")))
       ) {
-        changeResult("../assets/pics/279_Diamond Axe.png");
+        changeResult("/assets/pics/279_Diamond Axe.png");
       }
       //Gold Axe
       else if (
@@ -980,7 +980,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("266_Gold") &&
             craftCell[4].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/286_Golden Axe.png");
+        changeResult("/assets/pics/286_Golden Axe.png");
       }
       //Iron Axe
       else if (
@@ -1000,7 +1000,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("265_Iron") &&
             craftCell[4].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/258_Iron Axe.png");
+        changeResult("/assets/pics/258_Iron Axe.png");
       }
       //Stone Axe
       else if (
@@ -1020,7 +1020,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("4_Cobblestone") &&
             craftCell[4].src.includes("4_Cobblestone")))
       ) {
-        changeResult("../assets/pics/273_Stone Shovel.png");
+        changeResult("/assets/pics/273_Stone Shovel.png");
       }
       //Wooden Axe
       else if (
@@ -1040,7 +1040,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[1].src.includes("5_Oak") &&
             craftCell[4].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/271_Wooden Axe.png");
+        changeResult("/assets/pics/271_Wooden Axe.png");
       }
       //Diamond Hoe
       else if (
@@ -1052,7 +1052,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[1].src.includes("264_Diamond") &&
             craftCell[2].src.includes("264_Diamond")))
       ) {
-        changeResult("../assets/pics/293_Diamond Hoe.png");
+        changeResult("/assets/pics/293_Diamond Hoe.png");
       }
       //Gold Hoe
       else if (
@@ -1064,7 +1064,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[1].src.includes("266_Gold") &&
             craftCell[2].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/294_Golden Hoe.png");
+        changeResult("/assets/pics/294_Golden Hoe.png");
       }
       //Iron Hoe
       else if (
@@ -1076,7 +1076,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[1].src.includes("265_Iron") &&
             craftCell[2].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/292_Iron Hoe.png");
+        changeResult("/assets/pics/292_Iron Hoe.png");
       }
       //Stone Hoe
       else if (
@@ -1088,7 +1088,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[1].src.includes("4_Cobblestone") &&
             craftCell[2].src.includes("4_Cobblestone")))
       ) {
-        changeResult("../assets/pics/291_Stone Hoe.png");
+        changeResult("/assets/pics/291_Stone Hoe.png");
       }
       //Wooden Hoe
       else if (
@@ -1100,7 +1100,7 @@ for (let i = 0; i < craftCell.length; i++) {
           (craftCell[1].src.includes("5_Oak") &&
             craftCell[2].src.includes("5_Oak")))
       ) {
-        changeResult("../assets/pics/290_Wooden Hoe.png");
+        changeResult("/assets/pics/290_Wooden Hoe.png");
       }
       //Diamond Helmet
       else if (
@@ -1117,7 +1117,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("264_Diamond") &&
             craftCell[8].src.includes("264_Diamond")))
       ) {
-        changeResult("../assets/pics/310_Diamond Helmet.png");
+        changeResult("/assets/pics/310_Diamond Helmet.png");
       }
       //Gold Helmet
       else if (
@@ -1134,7 +1134,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("266_Gold") &&
             craftCell[8].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/314_Golden Helmet.png");
+        changeResult("/assets/pics/314_Golden Helmet.png");
       }
       //Iron Helmet
       else if (
@@ -1151,7 +1151,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[5].src.includes("265_Iron") &&
             craftCell[8].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/306_Iron Helmet.png");
+        changeResult("/assets/pics/306_Iron Helmet.png");
       }
       //Diamond ChestPlate
       else if (
@@ -1159,7 +1159,7 @@ for (let i = 0; i < craftCell.length; i++) {
         items[5] === 8 &&
         craftCell[1].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/311_Diamond Chestplate.png");
+        changeResult("/assets/pics/311_Diamond Chestplate.png");
       }
       //Gold ChestPlate
       else if (
@@ -1167,7 +1167,7 @@ for (let i = 0; i < craftCell.length; i++) {
         items[4] === 8 &&
         craftCell[1].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/315_Golden Chestplate.png");
+        changeResult("/assets/pics/315_Golden Chestplate.png");
       }
       //Iron ChestPlate
       else if (
@@ -1175,7 +1175,7 @@ for (let i = 0; i < craftCell.length; i++) {
         items[3] === 8 &&
         craftCell[1].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/307_Iron Chestplate.png");
+        changeResult("/assets/pics/307_Iron Chestplate.png");
       }
       //Diamond Leggings
       else if (
@@ -1184,7 +1184,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("0_Air") &&
         craftCell[7].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/312_Diamond Leggings.png");
+        changeResult("/assets/pics/312_Diamond Leggings.png");
       }
       //Gold Leggings
       else if (
@@ -1193,7 +1193,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("0_Air") &&
         craftCell[7].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/316_Golden Leggings.png");
+        changeResult("/assets/pics/316_Golden Leggings.png");
       }
       //Iron Leggings
       else if (
@@ -1202,7 +1202,7 @@ for (let i = 0; i < craftCell.length; i++) {
         craftCell[4].src.includes("0_Air") &&
         craftCell[7].src.includes("0_Air")
       ) {
-        changeResult("../assets/pics/308_Iron Leggings.png");
+        changeResult("/assets/pics/308_Iron Leggings.png");
       }
       //Diamonds Boots
       else if (
@@ -1217,7 +1217,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[3].src.includes("264_Diamond") &&
             craftCell[5].src.includes("264_Diamond")))
       ) {
-        changeResult("../assets/pics/313_Diamond Boots.png");
+        changeResult("/assets/pics/313_Diamond Boots.png");
       }
       //Gold Boots
       else if (
@@ -1232,7 +1232,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[3].src.includes("266_Gold") &&
             craftCell[5].src.includes("266_Gold")))
       ) {
-        changeResult("../assets/pics/317_Golden Boots.png");
+        changeResult("/assets/pics/317_Golden Boots.png");
       }
       //Iron Boots
       else if (
@@ -1247,7 +1247,7 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[3].src.includes("265_Iron") &&
             craftCell[5].src.includes("265_Iron")))
       ) {
-        changeResult("../assets/pics/309_Iron Boots.png");
+        changeResult("/assets/pics/309_Iron Boots.png");
       } else {
         result.style.display = "none";
       }
@@ -1262,7 +1262,7 @@ for (let i = 0; i < inventoryCell.length; i++) {
     console.log(inventoryCell[12].src);
     console.log(inventoryCell[13].src);
     for (let j = 10; j < inventoryCell.length; j++) {
-      inventoryCell[j].src = "../assets/pics/0_Air.png";
+      inventoryCell[j].src = "/assets/pics/0_Air.png";
       // inventoryCell[j].style.display = "none";
     }
     console.log(craftCell[0].src);
@@ -1270,20 +1270,20 @@ for (let i = 0; i < inventoryCell.length; i++) {
     console.log(craftCell[2].src);
     console.log(craftCell[3].src);
     for (let j = 0; j < craftCell.length; j++)
-      craftCell[j].src = "../assets/pics/0_Air.png";
+      craftCell[j].src = "/assets/pics/0_Air.png";
     currentUrl = "";
-    result.src = "../assets/pics/0_Air.png";
+    result.src = "/assets/pics/0_Air.png";
     result.style.display = "none";
-    inventoryCell[0].src = "../assets/pics/17_Oak Wood.png";
-    inventoryCell[1].src = "../assets/pics/4_Cobblestone.png";
-    inventoryCell[2].src = "../assets/pics/265_Iron Ingot.png";
-    inventoryCell[3].src = "../assets/pics/266_Gold Ingot.png";
-    inventoryCell[4].src = "../assets/pics/264_Diamond.png";
-    inventoryCell[5].src = "../assets/pics/331_Redstone.png";
-    inventoryCell[6].src = "../assets/pics/287_String.png";
-    inventoryCell[7].src = "../assets/pics/288_Feather.png";
-    inventoryCell[8].src = "../assets/pics/318_Flint.png";
-    inventoryCell[9].src = "../assets/pics/263_Coal.png";
+    inventoryCell[0].src = "/assets/pics/17_Oak Wood.png";
+    inventoryCell[1].src = "/assets/pics/4_Cobblestone.png";
+    inventoryCell[2].src = "/assets/pics/265_Iron Ingot.png";
+    inventoryCell[3].src = "/assets/pics/266_Gold Ingot.png";
+    inventoryCell[4].src = "/assets/pics/264_Diamond.png";
+    inventoryCell[5].src = "/assets/pics/331_Redstone.png";
+    inventoryCell[6].src = "/assets/pics/287_String.png";
+    inventoryCell[7].src = "/assets/pics/288_Feather.png";
+    inventoryCell[8].src = "/assets/pics/318_Flint.png";
+    inventoryCell[9].src = "/assets/pics/263_Coal.png";
   };
   inventoryCell[i].onclick = () => {
     if (currentUrl !== "" && inventoryCell[i].src.includes("0_Air")) {
@@ -1292,7 +1292,7 @@ for (let i = 0; i < inventoryCell.length; i++) {
       main.style.cursor = "default";
       if (result.src === currentUrl)
         for (let x = 0; x < craftCell.length; x++)
-          craftCell[x].src = "../assets/pics/0_Air.png";
+          craftCell[x].src = "/assets/pics/0_Air.png";
       currentUrl = "";
     } else {
       if (currentUrl !== "" && !inventoryCell[i].src.includes("0_Air")) {
@@ -1304,7 +1304,7 @@ for (let i = 0; i < inventoryCell.length; i++) {
         if (!inventoryCell[i].src.includes("0_Air")) {
           main.style.cursor = `url(${inventoryCell[i].src}),pointer`;
           currentUrl = inventoryCell[i].src;
-          inventoryCell[i].src = "../assets/pics/0_Air.png";
+          inventoryCell[i].src = "/assets/pics/0_Air.png";
         }
       }
     }
