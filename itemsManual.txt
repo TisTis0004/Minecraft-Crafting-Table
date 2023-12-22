@@ -1,0 +1,58 @@
+#Items Indexes
+air = 0
+oak wood = 1
+Cobblestone = 2
+iron = 3
+gold = 4
+diamond = 5
+redstone = 6
+coal = 7
+flint = 8
+oak planks = 9
+stick = 10
+feather = 11
+string = 12
+minecart = 13
+chest = 14
+wool = 15
+Iron Block = 16
+===============================
+===============================
+===============================
+===============================
+#Craftable Items
+All Swords
+All Pickaxes
+All Shovels
+All Axes
+All Hoes
+Arrow
+Anvil
+Bed
+Bow
+Boat
+Bucket
+Furnace
+Clock
+Compass
+Chest
+(Diamond,Iron,Coal,Redstone,Gold) Blocks
+Fishing Rod
+Torch
+Redstone Torch
+Minecart
+Minecart with chest
+Minecart with furnace
+Iron Door
+Wooden Door
+Piston
+Lever
+Rails
+Ladder
+Wooden Stairs
+Stone Stairs
+Wooden Plate
+Stone Plate
+Iron Plate
+Golden Plate
+Activator Rail
