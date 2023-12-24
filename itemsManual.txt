@@ -16,6 +16,8 @@ minecart = 13
 chest = 14
 wool = 15
 Iron Block = 16
+furnace = 17
+redstone torch = 18
 ===============================
 ===============================
 ===============================
@@ -56,3 +58,16 @@ Stone Plate
 Iron Plate
 Golden Plate
 Activator Rail
+Powered Rails
+Detector Rail
+Dropper
+Dispenser
+Note Block
+Bowl (presented as beetroot bowl couldn't find the empty one (: )
+Shield
+Wooden button
+Stone button
+Iron Nugget
+Gold Nugget
+Wooden Sign
+TripWire Hook

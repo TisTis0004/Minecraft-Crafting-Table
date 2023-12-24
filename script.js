@@ -190,7 +190,7 @@ for (let i = 0; i < craftCell.length; i++) {
     } else {
       craftCell[i].src = "/assets/pics/0_Air.png";
     }
-    let items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    let items = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (let j = 0; j < craftCell.length; j++) {
       if (craftCell[j].src.includes("0_Air")) items[0]++;
       else if (craftCell[j].src.includes("17_Oak")) items[1]++;
@@ -210,6 +210,7 @@ for (let i = 0; i < craftCell.length; i++) {
       else if (craftCell[j].src.includes("35_White")) items[15]++;
       else if (craftCell[j].src.includes("42_Iron")) items[16]++;
       else if (craftCell[j].src.includes("61_Furnace")) items[17]++;
+      else if (craftCell[j].src.includes("76_Redstone")) items[18]++;
 
       //Changing the result cell
       result.src = "/assets/pics/0_Air.png";
@@ -254,22 +255,22 @@ for (let i = 0; i < craftCell.length; i++) {
       }
       //Compass
       else if (
-        craftCell[1].src.includes("265") &&
-        craftCell[3].src.includes("265") &&
-        craftCell[5].src.includes("265") &&
-        craftCell[7].src.includes("265") &&
-        craftCell[4].src.includes("331") &&
+        craftCell[1].src.includes("265_Iron") &&
+        craftCell[3].src.includes("265_Iron") &&
+        craftCell[5].src.includes("265_Iron") &&
+        craftCell[7].src.includes("265_Iron") &&
+        craftCell[4].src.includes("331_Redstone") &&
         items[0] === 4
       ) {
         changeResult("/assets/pics/345_Compass.png");
       }
       //Clock
       else if (
-        craftCell[1].src.includes("266") &&
-        craftCell[3].src.includes("266") &&
-        craftCell[5].src.includes("266") &&
-        craftCell[7].src.includes("266") &&
-        craftCell[4].src.includes("331") &&
+        craftCell[1].src.includes("266_Gold") &&
+        craftCell[3].src.includes("266_Gold") &&
+        craftCell[5].src.includes("266_Gold") &&
+        craftCell[7].src.includes("266_Gold") &&
+        craftCell[4].src.includes("331_Redstone") &&
         items[0] === 4
       ) {
         changeResult("/assets/pics/347_Clock.png");
@@ -380,6 +381,68 @@ for (let i = 0; i < craftCell.length; i++) {
       ) {
         changeResult("/assets/pics/157_Activator Rail.png");
       }
+      //Powered Rails
+      else if (
+        items[0] === 1 &&
+        items[6] === 1 &&
+        items[10] === 1 &&
+        items[4] === 6 &&
+        craftCell[0].src.includes("266_Gold") &&
+        craftCell[2].src.includes("266_Gold") &&
+        craftCell[3].src.includes("266_Gold") &&
+        craftCell[5].src.includes("266_Gold") &&
+        craftCell[6].src.includes("266_Gold") &&
+        craftCell[8].src.includes("266_Gold") &&
+        craftCell[4].src.includes("280_Stick") &&
+        craftCell[7].src.includes("76_Redstone")
+      ) {
+        changeResult("/assets/pics/27_Powered Rail.png");
+      }
+      //Detector Rails
+      else if (
+        items[0] === 1 &&
+        items[6] === 1 &&
+        items[3] === 6 &&
+        craftCell[0].src.includes("265_Iron") &&
+        craftCell[2].src.includes("265_Iron") &&
+        craftCell[3].src.includes("265_Iron") &&
+        craftCell[5].src.includes("265_Iron") &&
+        craftCell[6].src.includes("265_Iron") &&
+        craftCell[8].src.includes("265_Iron") &&
+        craftCell[7].src.includes("331_Redstone") &&
+        craftCell[4].src.includes("70_Stone") &&
+        craftCell[1].src.includes("0_Air")
+      ) {
+        changeResult("/assets/pics/28_Detector Rail.png");
+      }
+      //Dropper
+      else if (
+        items[2] === 7 &&
+        items[0] === 1 &&
+        items[6] === 1 &&
+        craftCell[4].src.includes("0_Air") &&
+        craftCell[7].src.includes("331_Redstone")
+      ) {
+        changeResult("/assets/pics/158_Dropper.png");
+      }
+      //Dispenser
+      else if (
+        items[2] === 7 &&
+        items[0] === 0 &&
+        items[6] === 1 &&
+        craftCell[4].src.includes("261_Bow") &&
+        craftCell[7].src.includes("331_Redstone")
+      ) {
+        changeResult("/assets/pics/23_Dispenser.png");
+      }
+      //Note Block
+      else if (
+        items[0] === 0 &&
+        items[9] === 8 &&
+        craftCell[4].src.includes("331_Redstone")
+      ) {
+        changeResult("/assets/pics/25_Note Block.png");
+      }
       //Ladders
       else if (
         items[0] === 2 &&
@@ -470,6 +533,109 @@ for (let i = 0; i < craftCell.length; i++) {
       ) {
         changeResult("/assets/pics/325_Bucket.png");
       }
+      //Bowl
+      else if (
+        items[0] === 6 &&
+        items[9] === 3 &&
+        ((craftCell[0].src.includes("5_Oak") &&
+          craftCell[4].src.includes("5_Oak") &&
+          craftCell[2].src.includes("5_Oak")) ||
+          (craftCell[3].src.includes("5_Oak") &&
+            craftCell[7].src.includes("5_Oak") &&
+            craftCell[5].src.includes("5_Oak")))
+      ) {
+        changeResult("/assets/pics/436_Beetroot Soup.png");
+      }
+      //Shield
+      else if (
+        items[0] === 2 &&
+        items[9] === 6 &&
+        items[3] === 1 &&
+        craftCell[6].src.includes("0_Air") &&
+        craftCell[6].src.includes("0_Air")
+      ) {
+        changeResult("/assets/pics/442_Shield.png");
+      }
+      //Iron Nugget
+      else if (
+        items[0] === 8 &&
+        items[3] === 1 &&
+        (craftCell[0].src.includes("265_Iron") ||
+          craftCell[1].src.includes("265_Iron") ||
+          craftCell[2].src.includes("265_Iron") ||
+          craftCell[3].src.includes("265_Iron") ||
+          craftCell[4].src.includes("265_Iron") ||
+          craftCell[5].src.includes("265_Iron") ||
+          craftCell[6].src.includes("265_Iron") ||
+          craftCell[7].src.includes("265_Iron") ||
+          craftCell[8].src.includes("265_Iron"))
+      ) {
+        changeResult("/assets/pics/452_Iron Nugget.png");
+      }
+      //Iron Nugget
+      else if (
+        items[0] === 8 &&
+        items[3] === 1 &&
+        (craftCell[0].src.includes("265_Iron") ||
+          craftCell[1].src.includes("265_Iron") ||
+          craftCell[2].src.includes("265_Iron") ||
+          craftCell[3].src.includes("265_Iron") ||
+          craftCell[4].src.includes("265_Iron") ||
+          craftCell[5].src.includes("265_Iron") ||
+          craftCell[6].src.includes("265_Iron") ||
+          craftCell[7].src.includes("265_Iron") ||
+          craftCell[8].src.includes("265_Iron"))
+      ) {
+        changeResult("/assets/pics/452_Iron Nugget.png");
+      }
+      //Gold Nugget
+      else if (
+        items[0] === 8 &&
+        items[4] === 1 &&
+        (craftCell[0].src.includes("266_Gold") ||
+          craftCell[1].src.includes("266_Gold") ||
+          craftCell[2].src.includes("266_Gold") ||
+          craftCell[3].src.includes("266_Gold") ||
+          craftCell[4].src.includes("266_Gold") ||
+          craftCell[5].src.includes("266_Gold") ||
+          craftCell[6].src.includes("266_Gold") ||
+          craftCell[7].src.includes("266_Gold") ||
+          craftCell[8].src.includes("266_Gold"))
+      ) {
+        changeResult("/assets/pics/371_Gold Nugget.png");
+      }
+      //Wooden btn
+      else if (
+        items[0] === 8 &&
+        items[9] === 1 &&
+        (craftCell[0].src.includes("5_Oak") ||
+          craftCell[1].src.includes("5_Oak") ||
+          craftCell[2].src.includes("5_Oak") ||
+          craftCell[3].src.includes("5_Oak") ||
+          craftCell[4].src.includes("5_Oak") ||
+          craftCell[5].src.includes("5_Oak") ||
+          craftCell[6].src.includes("5_Oak") ||
+          craftCell[7].src.includes("5_Oak") ||
+          craftCell[8].src.includes("5_Oak"))
+      ) {
+        changeResult("/assets/pics/143_Wooden Button.png");
+      }
+      //Stone btn
+      else if (
+        items[0] === 8 &&
+        items[2] === 1 &&
+        (craftCell[0].src.includes("4_Cobblestone") ||
+          craftCell[1].src.includes("4_Cobblestone") ||
+          craftCell[2].src.includes("4_Cobblestone") ||
+          craftCell[3].src.includes("4_Cobblestone") ||
+          craftCell[4].src.includes("4_Cobblestone") ||
+          craftCell[5].src.includes("4_Cobblestone") ||
+          craftCell[6].src.includes("4_Cobblestone") ||
+          craftCell[7].src.includes("4_Cobblestone") ||
+          craftCell[8].src.includes("4_Cobblestone"))
+      ) {
+        changeResult("/assets/pics/77_Stone Button.png");
+      }
       //Wool
       else if (
         items[0] === 5 &&
@@ -492,6 +658,31 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[8].src.includes("287_String")))
       ) {
         changeResult("/assets/pics/35_White Wool.png");
+      }
+      //Wooden Sign
+      else if (
+        items[0] === 2 &&
+        items[9] === 6 &&
+        items[10] === 1 &&
+        craftCell[6].src.includes("0_Air") &&
+        craftCell[8].src.includes("0_Air")
+      ) {
+        changeResult("/assets/pics/63_Standing Sign Block.png");
+      }
+      //Tripwire Hook
+      else if (
+        items[0] === 6 &&
+        ((craftCell[0].src.includes("265_Iron") &&
+          craftCell[3].src.includes("280_Stick") &&
+          craftCell[6].src.includes("5_Oak")) ||
+          (craftCell[1].src.includes("265_Iron") &&
+            craftCell[4].src.includes("280_Stick") &&
+            craftCell[7].src.includes("5_Oak")) ||
+          (craftCell[2].src.includes("265_Iron") &&
+            craftCell[5].src.includes("280_Stick") &&
+            craftCell[8].src.includes("5_Oak")))
+      ) {
+        changeResult("/assets/pics/131_Tripwire Hook.png");
       }
       //Bed
       else if (
@@ -601,16 +792,6 @@ for (let i = 0; i < craftCell.length; i++) {
             craftCell[6].src.includes("287_String")))
       ) {
         changeResult("/assets/pics/346_Fishing Rod.png");
-      }
-      //Powered Rails
-      else if (
-        items[0] === 1 &&
-        items[4] === 6 &&
-        items[6] === 1 &&
-        items[10] === 1 &&
-        craftCell[1].src.includes("0_Air")
-      ) {
-        changeResult("/assets/pics/27_Powered Rail.png");
       }
       //Wooden Plate
       else if (
@@ -1290,7 +1471,6 @@ for (let i = 0; i < inventoryCell.length; i++) {
   reset.onclick = () => {
     for (let j = 10; j < inventoryCell.length; j++) {
       inventoryCell[j].src = "/assets/pics/0_Air.png";
-      // inventoryCell[j].style.display = "none";
     }
     for (let j = 0; j < craftCell.length; j++)
       craftCell[j].src = "/assets/pics/0_Air.png";
@@ -1335,10 +1515,6 @@ for (let i = 0; i < inventoryCell.length; i++) {
     if (currentUrl === inventoryCell[i].src) {
       main.style.cursor = "default";
       currentUrl = "";
-    }
-    if (!result.src.includes("0_Air")) {
-      !result.src.includes("0_Air");
-      main.style.cursor = "default";
     }
   };
 }
